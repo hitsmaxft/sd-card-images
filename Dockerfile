@@ -1,5 +1,6 @@
 FROM public.ecr.aws/lts/ubuntu:20.04_stable
 ENV DEBIAN_FRONTEND=noninteractive
+RUN sed -i 's@//.*archive.ubuntu.com@//mirrors.ustc.edu.cn@g' /etc/apt/sources.list
 RUN apt-get update && \
     apt-get --assume-yes \
             --no-install-recommends \

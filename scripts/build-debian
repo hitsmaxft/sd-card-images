@@ -125,6 +125,7 @@ chroot debian /bin/sh -ex <<- EOF
 /usr/bin/apt-get -y upgrade
 /usr/bin/apt-get -y install systemd-timesyncd || :
 /usr/bin/apt-get -y install systemd-resolved || :
+/usr/bin/apt-get -y install sudo vim iproute2 screen network-manager
 /usr/bin/apt-get clean
 /bin/rm -rf /var/lib/apt/lists/*
 /usr/bin/systemctl enable systemd-networkd.service
